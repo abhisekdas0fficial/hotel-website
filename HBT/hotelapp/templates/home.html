@@ -4,18 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HBT</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   </head>
   <body>
-    <div class="container">
-      <h1>Home Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem
-        recusandae, dicta eaque quod, ipsa soluta natus in impedit consectetur
-        alias beatae provident eveniet rerum iusto nesciunt a. Odit, recusandae!
-      </p>
-    </div>
+    <h1>Hello {{username}}</h1>
+    <a href="/logoutview/">Logout</a>
     <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
     <script src="{% static 'js/popper.min.css' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
