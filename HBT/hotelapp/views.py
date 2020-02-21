@@ -18,26 +18,9 @@ def signup(request):
             return redirect('/login/')
     else:
         form = UserForm()
-    return render(request, "registration/signup.html", {'form': form})
-
-
-def check(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)  # logs in the user
-        return redirect("/home")
-    else:
-        return redirect("/login")
+    return render(request, 'registration/signup.html', {'form': form})
 
 
 @login_required
-def home(request):
-    username = request.user.username
-    return render(request, "home.html", {'username': username})
-
-
-def logoutview(request):
-    logout(request)  # logsout the current user
-    return redirect("/")
+def profile(request):
+    return render(request, 'profile.html')

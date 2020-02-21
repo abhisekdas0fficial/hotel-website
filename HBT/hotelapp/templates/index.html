@@ -6,12 +6,5 @@
     recusandae, dicta eaque quod, ipsa soluta natus in impedit consectetur alias
     beatae provident eveniet rerum iusto nesciunt a. Odit, recusandae!
   </p>
-  {% if user.is_authenticated %}
-    <h1>Hello {{user}}</h1>
-    <a href="/logout/">Logout</a>
-  {% else %}
-    <a href="/login">Login</a>
-    <a href="/signup">Sign Up</a>
-  {% endif %}
 </div>
 {% endblock content %}

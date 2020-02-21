@@ -4,13 +4,13 @@
     <h1 class="display-1">Login</h1>
   </div>
 </div>
-<div class="container">
-  <div class="col-7">
+<div class="container my-5">
+  <div class="col-md-7">
     <form method="POST">
       {% csrf_token %} {{ form|crispy }}
       <button type="submit" class="btn btn-primary">Sign In</button>
     </form>
-    <div class="border-top mt-5 pt-2">
+    <div class="border-top my-5 pt-2">
       <small class="text-muted ml-4">
         Don't have an account? <a class="lead" href="/signup/">Sign Up</a>
       </small>

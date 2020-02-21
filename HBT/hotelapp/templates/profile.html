@@ -1,6 +1,5 @@
 {% extends "base.html" %} {% block content %}
 <div class="container">
-  <h1>Hello {{username}}</h1>
-  <a href="/logoutview/">Logout</a>
+  <h1>Hello {{user.first_name}}</h1>
 </div>
 {% endblock content %}

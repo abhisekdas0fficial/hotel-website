@@ -6,10 +6,12 @@
       <legend class="display-1 border-bottom mb-4">Sign Up</legend>
       {{ form|crispy }}
       <button type="submit" class="btn btn-primary">Sign Up</button>
-      <small class="text-muted ml-4">
-        Already Have An Account? <a class="" href="/login/">Login</a>
-      </small>
     </form>
+    <div class="border-top my-5 pt-2">
+      <small class="text-muted ml-4">
+        Already Have An Account? <a class="lead" href="/login/">Login</a>
+      </small>
+    </div>
   </div>
 </div>
 {% endblock content %}

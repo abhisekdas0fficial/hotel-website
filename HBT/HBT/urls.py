@@ -16,14 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hotelapp import views
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
-    path('login/', LoginView.as_view()),
     path('signup/', views.signup),
-    path('check/', views.check),
-    path('home/', views.home),
-    path('logout/', views.logoutview)
+    path('login/', LoginView.as_view()),
+    path('logout/', LogoutView.as_view(template_name = 'index.html')),
+    path('profile/', views.profile)
 ]

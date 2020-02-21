@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">HBT</span>
+  <form class="form-inline">
+    {% if user.is_authenticated %}
+    <div class="text-muted">
+      <span>Hello, {{user.first_name}}</span>
+      &nbsp;&nbsp;&nbsp;
+      <a href="/logout" class="lead">Logout</a>
+    </div>
+    {% else %}
+    <a href="/login" class="lead">Login</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/signup" class="lead">Sign Up</a>
+    {% endif %}
+  </form>
+</nav>
