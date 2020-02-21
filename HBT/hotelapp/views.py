@@ -11,14 +11,14 @@ def index(request):
 
 
 def signup(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("/login/")
+            return redirect('/login/')
     else:
         form = UserForm()
-        return render(request, "registration/signup.html", {'form': form})
+    return render(request, "registration/signup.html", {'form': form})
 
 
 def check(request):
@@ -40,4 +40,4 @@ def home(request):
 
 def logoutview(request):
     logout(request)  # logsout the current user
-    return redirect("/login")
+    return redirect("/")
