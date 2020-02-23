@@ -42,7 +42,7 @@ def register(request, id):
             instance.user = request.user
             instance.room_id = room
             instance.save()
-            return redirect('congrats')
+            return redirect('/congrats')
     else:
         form = BookingForm()
     return render(request, 'registration/register.html', {'form': form, 'room': room})
@@ -50,4 +50,4 @@ def register(request, id):
 
 @login_required
 def congrats(request):
-    return(render, 'congrats.html')
+    return render(request, 'congrats.html')
