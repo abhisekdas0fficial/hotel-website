@@ -1,0 +1,9 @@
+footer {
+  background: #f5f5f5;
+}
+
+footer .map {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/*# sourceMappingURL=style.css.map */

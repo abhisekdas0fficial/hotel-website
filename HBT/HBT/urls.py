@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from hotelapp import views
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
+    path('', views.index),
     path('admin/', admin.site.urls),
+    path('signup/', views.signup),
+    path('login/', LoginView.as_view()),
+    path('logout/', LogoutView.as_view(template_name='index.html')),
+    path('profile/', views.profile),
+    path('rooms/', views.rooms),
+    path('rooms/register/<int:id>/', views.register),
+    path('congrats/', views.congrats)
 ]
