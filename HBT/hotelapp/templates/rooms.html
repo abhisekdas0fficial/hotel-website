@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="container my-5">
+  <div class="container">
+    <div class="row">
+      {% for room in rooms %}
+        <div class="col-md">
+          <div class="card" style="width: 18rem;">
+            <img
+              src="{% static 'images/flower.png' %}"
+              class="card-img-top"
+              alt="flower"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <p class="font-weight-bold lead">&#8377 {{room.price}}</p>
+              <a href="register/{{room.id}}" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

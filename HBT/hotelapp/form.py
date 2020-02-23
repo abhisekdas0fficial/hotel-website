@@ -14,4 +14,8 @@ class UserForm(UserCreationForm):
 class BookingForm(forms.ModelForm):
     class Meta:
         model = UserBookingData
-        fields = ('address', 'check_in_date', 'check_out_date')
+        exclude = ['user', 'room_id']
+        widgets = {
+            'check_in_date': forms.DateInput(attrs={'type': 'date'}),
+            'check_out_date': forms.DateInput(attrs={'type': 'date'})
+        }
