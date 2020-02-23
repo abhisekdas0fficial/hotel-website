@@ -1,11 +1,48 @@
 {% extends "base.html" %} {% block content %}
-<div class="container">
-  <h1>Home Page</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem
-    recusandae, dicta eaque quod, ipsa soluta natus in impedit consectetur alias
-    beatae provident eveniet rerum iusto nesciunt a. Odit, recusandae!
-  </p>
-</div>
-<div style="margin: 50vh;"></div>
+<header id="showcase">
+  <div class="container">
+    <div class="showcase-content">
+      <h1><span class="text">Welcome</span> Hotel HBT</h1>
+      <p class="lead">
+        Luxury like you've never experienced before! #Best memories start here.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus a
+        omnis rem obcaecati, nulla dolorum excepturi provident vel? Recusandae
+        mollitia, perferendis placeat unde minima consectetur corporis aut
+        nesciunt quis quibusdam? Come in as Guests. Leave as Family.
+      </p>
+      <button class="btn btn-dark py-3 px-5" href="rooms.htm">BOOK NOW</button>
+    </div>
+  </div>
+</header>
+<section id="info" class="dark">
+  <div class="info-img"></div>
+  <div class="info-content">
+    <h2><span class="text">The History</span> Of Our Hotel</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi
+      cum quaerat, magni vel tempora minus corporis eius cupiditate quasi
+      molestias soluta sed laborum! Possimus ratione similique ipsam sapiente
+      neque!
+    </p>
+    <button href="about.html" class="btn btn-light py-3 px-5">Read More</button>
+  </div>
+</section>
+<section id="features" class="row">
+  <div class="box col-md">
+    <i class="fas fa-hotel fa-3x"></i>
+    <h3>Great Location</h3>
+    <p>HBT is located rights in the heart of the city</p>
+  </div>
+
+  <div class="box light col-md">
+    <i class="fas fa-car fa-3x"></i>
+    <h3>Car Service Available</h3>
+    <p>No need to book a cab,HBT Car Service will get the job done</p>
+  </div>
+  <div class="box col-md">
+    <i class="fas fa-clipboard-list fa-3x"></i>
+    <h3>Quick Check In</h3>
+    <p>Hassle free check in and check out</p>
+  </div>
+</section>
 {% endblock content %}
