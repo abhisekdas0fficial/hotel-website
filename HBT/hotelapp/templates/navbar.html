@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <span class="navbar-brand mx-5">HBT</span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <span class="navbar-brand mx-5 font-weight-bold">HBT</span>
   <button
     class="navbar-toggler"
     type="button"
@@ -12,8 +12,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav mr-auto">
-      <ul class="nav nav-tabs" id="pills-tab" role="tablist">
+      <ul class="navbar-nav mr-auto nav nav-tabs" id="pills-tab" role="tablist">
         <li class="nav-item">
           <a
             class="nav-link {{home_nav}}"
@@ -25,15 +24,15 @@
             >Home</a
           >
         </li>
-        <li class="nav-item {{profile_nav}}">
+        <li class="nav-item">
           <a
-            class="nav-link"
-            id="profile"
-            href="#profile"
+            class="nav-link {{about_nav}}"
+            id="about"
+            href="/about"
             role="tab"
             aria-controls="pills-profile"
             aria-selected="false"
-            >Profile</a
+            >About</a
           >
         </li>
         <li class="nav-item">
@@ -48,10 +47,9 @@
           >
         </li>
       </ul>
-    </div>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline">
       {% if user.is_authenticated %}
-      <div class="text-muted">
+      <div class="text-light">
         <span>Hello, {{user.first_name}}</span>
         &nbsp;&nbsp;&nbsp;
         <a href="/logout" class="lead">Logout</a>

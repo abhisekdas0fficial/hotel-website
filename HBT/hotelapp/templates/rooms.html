@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block content %}
+{%static "images" as baseUrl %}
 <div id="bgroom">
   <div class="container">
     <div class="showcase-content">
@@ -17,18 +18,17 @@
       <div class="col-md">
         <div class="card" style="width: 18rem;">
           <img
-            src="{% static 'images/flower.png' %}"
+            src="{{baseUrl}}/{{room.image_path}}"
             class="card-img-top"
             alt="flower"
           />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{room.name}}</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              {{room.description}}
             </p>
             <p class="font-weight-bold lead">&#8377 {{room.price}}</p>
-            <a href="register/{{room.id}}" class="btn btn-primary">Book Now</a>
+            <a href="register/{{room.id}}" class="btn btn-dark py-2 px-3">Book Now</a>
           </div>
         </div>
       </div>
@@ -36,4 +36,25 @@
     </div>
   </div>
 </section>
+<section id="features" class="row">
+  <div class="box col-md">
+      <i class="fas fa-concierge-bell fa-3x"></i>
+      <h3>Great Service</h3>
+  <p>“The best way to find yourself is to lose yourself in the service of others.”</p>
+  </div>
+  
+  <div class="box light col-md">
+      <i class="fas fa-utensils fa-3x"></i>
+      <h3>Free Meals</h3>
+      <p>From a world cuisine to authentic Italian or a true taste of Indian delicacies, the hotel offers a variety of choices </p>
+      </div>
+  
+  <div class="box col-md">
+      <i class="fas fa-glass-martini-alt fa-3x"></i>
+      <h3>Bar</h3>
+      <p>Enjoy a drink in our spacious lounge bar, is a truly enjoyable experience </p>
+      </div>
+     
+  </section>
+  
 {% endblock content %}

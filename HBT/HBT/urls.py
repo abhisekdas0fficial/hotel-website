@@ -27,5 +27,7 @@ urlpatterns = [
     path('profile/', views.profile),
     path('rooms/', views.rooms),
     path('rooms/register/<int:id>/', views.register),
-    path('congrats/', views.congrats)
+    path('congrats/', views.congrats),
+    path('about/', views.about)
+
 ]

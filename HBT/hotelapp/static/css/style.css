@@ -85,7 +85,7 @@ p {
   color: #444;
 }
 .grey {
-  background: lightgray;
+  background: #fff;
   color: #333;
 }
 .dark {
@@ -165,7 +165,7 @@ p {
 #bgroom {
   background: url("../images/roombg.jpg") no-repeat center center/cover;
   height: 799px;
-  background-color: rgba(253, 246, 246, 0.3);
+  background-color: rgba(253, 246, 246, 0.24);
   background-blend-mode: overlay;
 }
 #bgroom .showcase-content {
@@ -259,11 +259,10 @@ p {
   padding: 20px;
   margin-bottom: 40px;
 }
-#test .testimonial img {
+#test img {
   width: 100px;
-  float: left;
-  margin-right: 20px;
-  border-radius: 50%;
+  margin-top: 2.5rem;
+  border-radius: 100%;
 }
 /*contact form*/
 #contact-form .form-group {
@@ -287,7 +286,7 @@ p {
 #contact-form textarea:focus {
   outline: none;
   border-color: #f7c08a;
-  background-color: rgb(219, 229, 241);
+  background-color: #dbe5f1;
 }
 .roomsAvailable {
   color: #f7c08a;

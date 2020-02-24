@@ -11,6 +11,10 @@ def index(request):
     return render(request, 'index.html', {'home_nav': 'active'})
 
 
+def about(request):
+    return render(request, 'about.html', {'about_nav': 'active'})
+
+
 def signup(request):
     if request.method == 'POST':
         form = UserForm(request.POST)

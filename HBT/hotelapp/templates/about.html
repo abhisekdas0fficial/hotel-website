@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+{%static "images" as baseUrl %}
+<section id="about-info" class="py-3 grey">
+  <div class="container">
+    <div class="info-left">
+      <h1 class="large"><span class="text">About</span> Hotel HBT</h1>
+      <p>
+        Hotel HBT has a distinctively sleek contemporary architectural design
+        contrasting with the rich historical essence . The hotel is nestled
+        amidst acres of land, resplendent with greenery, sunshine, and water.
+        This luxury Business Resort is en route from the airport and a 15 minute
+        drive from the city centre. It is a Business Resort in the urban
+        context. One that has the efficiency of a business hotel yet the
+        feet-up-feel of a resort. An upscale, world class, Asia’s best business
+        Hotel set amidst resort surroundings.
+      </p>
+    </div>
+
+    <div class="info-right">
+      <img class="img" src="{% static 'images/about1.jpg' %}" alt="hotel" />
+    </div>
+  </div>
+</section>
+<div class="clr"></div>
+<section id="test" class="py-3">
+  <h2 class="large"><span class="text">Creat</span>ors</h2>
+  <div class="row mb-5">
+    <div class="col-md text-center">
+      <img src="{% static 'images/Azhar.jpeg' %}" alt="profile-1" />
+    </div>
+
+    <div class="col-md text-center">
+      <img src="{% static 'images/Abhisek.jpeg' %}" alt="profile-1" />
+    </div>
+    <div class="col-md text-center">
+      <img src="{% static 'images/Ankur.jpeg' %}" alt="profile-1" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md text-center">
+      <img src="{% static 'images/Animikh.jpeg' %}" alt="profile-1" />
+    </div>
+    <div class="col-md text-center">
+      <img src="{% static 'images/Agniva.jpeg' %}" alt="profile-1" />
+    </div>
+    <div class="col-md text-center">
+      <img src="{% static 'images/Tapadipta.jpeg' %}" alt="profile-1" />
+    </div>
+  </div>
+</section>
+
+<section id="features" class="row">
+  <div class="box col-md">
+    <i class="fas fa-swimming-pool fa-3x"></i>
+    <h3>Swimming Pool</h3>
+    <p>Enjoy a refreshing dip in the pool and revitalize yourself.</p>
+  </div>
+  <div class="box light col-md">
+    <i class="fas fa-spa fa-3x"></i>
+    <h3>Spa Available</h3>
+    <p>
+      Pamper yourself with personalized spa treatments at our luxury Hotel BT
+    </p>
+  </div>
+  <div class="box col-md">
+    <i class="fas fa-dumbbell fa-3x"></i>
+    <h3>Fittness</h3>
+    <p>Time for today's workout? We welcome you to our brand-new fitness</p>
+  </div>
+</section>
+{% endblock content %}

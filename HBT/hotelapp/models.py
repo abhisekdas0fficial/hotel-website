@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 
 
 class HotelRoomsData(models.Model):
+    name = models.CharField(max_length=20, null=True)
+    description = models.CharField(max_length=200, null=True)
+    image_path = models.CharField(max_length=30, null=True)
     price = models.PositiveIntegerField()
 
 
